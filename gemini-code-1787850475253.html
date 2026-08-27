@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Minecraft Server</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #2b2b2b;
+            padding: 30px;
+            border: 4px solid #3c3c3c;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: #55ff55;
+        }
+        .ip-box {
+            background: #111;
+            padding: 15px;
+            font-size: 20px;
+            color: #ff5555;
+            border: 2px dashed #555;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        button {
+            background-color: #3c8527;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4ca633;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to My Minecraft Server!</h1>
+        <p>Explore, build, and survive with us. Version: 1.20+</p>
+        
+        <h3>Server IP Address:</h3>
+        <div class="ip-box" onclick="copyIP()">play.myserver.com</div>
+        <p id="copied" style="color: #55ff55; font-size: 14px; display: none;">IP Copied to clipboard!</p>
+        
+        <h3>Rules</h3>
+        <p>1. No griefing.<br>2. Be respectful to players.<br>3. Have fun!</p>
+    </div>
+
+    <script>
+        function copyIP() {
+            navigator.clipboard.writeText("play.myserver.com");
+            var notice = document.getElementById("copied");
+            notice.style.display = "block";
+            setTimeout(() => { notice.style.display = "none"; }, 2000);
+        }
+    </script>
+
+</body>
+</html>
